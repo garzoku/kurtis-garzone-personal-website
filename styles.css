@@ -1,0 +1,255 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 130%;
+}
+header {
+    display: inline-block;
+    width: 100%;
+    background-color: #424242;
+}
+nav>ul {
+    display: inline;
+    vertical-align: top;
+    padding: 0 1em;
+    float: right;
+}
+nav>ul>li {
+    display: inline-block;
+    margin: 0 .5em;
+    padding: 0 .5em;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+nav>ul>li>a{
+    color: white;
+    text-decoration: none;
+    
+}
+#main-image {
+    width: 380px;
+    display: block;
+}
+img {
+    border-radius: 2px;
+}
+main {
+    margin: 0 auto;
+    margin-block-start: 4em;
+    max-width: 1080px;
+    min-height: 85%;
+}
+.columns {
+    display: flex;
+}
+.main-container{
+    padding-inline-start: 2em;
+    padding-top: 2em;
+}
+.main-titles>h1 {
+    color: white;
+    background-color:#fc6f5f;
+    height: 40px;
+    width: fit-content;
+    text-align: center;
+    padding: 12px 24px 6px 24px;
+    margin: 2px;
+}
+.main-titles>h2 {
+    color: white;
+    background-color:#5c5c5c;
+    margin:2px;
+    height: 30px;
+    width: fit-content;
+    text-align: center;
+    padding: 6px 24px 0 24px;
+    font-size: 100%;
+}
+.steps {
+    margin: 0 auto;
+    margin-block-end: 64px;
+    width: 65%;
+    padding-top: 1em;
+}
+.step-container{
+    margin-bottom: 4em;
+    text-align: center;
+    border: 2px solid;
+}
+#writing-step-image {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+.step-num {
+    color: white;
+    background-color:#fc6f5f;
+    height: 25px;
+    text-align: center;
+    padding: 12px 24px 12px 24px;
+    line-height: 1em;
+    font-size: 120%;
+}
+.step-column{
+    display: flex;
+    flex-direction: column;
+}
+.step-text {
+    padding:1em 1em;
+    font-size: 90%; 
+}
+.revisions {
+    margin: 0 auto;
+    margin-block-end: 64px;
+    width: 65%;
+    border-radius: 2px;
+    padding-top: 1em;
+        font-size: 90%; 
+}
+.revision-container {
+    border: 2px solid;
+    margin-bottom: 4em;
+    text-align: center;
+}
+.before {
+    color:white;
+    float:left;
+    margin-left: 10%;
+    margin-top: 6%;
+}
+.after {
+    color:white;
+    float:right;
+    margin-right: 10%;
+    margin-top: 6%;
+}
+.revision-num {
+    background-color:#fc6f5f;
+    height: auto;
+    padding: 3px 6px 3px 6px;
+    line-height: 1em;
+}
+.revision-container .main-image img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin:auto;
+}
+.thumb-image {
+    text-align: center;
+    margin: 1% 1%;
+}
+
+.revision-container .thumb-image .box{
+    display: inline-flex;
+    width:20%;
+    height: 20%;
+    border: 2px solid white;
+    cursor: pointer;
+    
+}
+.revision-container .thumb-image .box.active{
+    border-color: blue;
+    border-width: 3px;
+}
+
+.revision-container .thumb-image .box img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.revision-text {
+    border-top: 1px solid black;
+    padding: 1em 1em;
+}
+
+
+footer {
+    background-color:#edebec;
+    padding: 24px;    
+}
+@media only screen and (max-width: 768px){
+     body {
+        font-size: 100%;
+    }
+    header {
+        background-color: #424242;
+        padding-top: 1%;
+    }
+    
+    nav {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        width: 100%;
+    } 
+    nav>ul {
+        padding: 0;
+        margin: 0 .5em .5em;
+        float: center;
+    }
+    nav>ul>li {
+        display:inline-flex;
+        margin: 0;
+    
+    }
+    nav>ul>li>a {
+        color: white;
+        text-decoration: none;
+    }
+    #main-image{
+        width: 180px;
+        padding: 0 25%;
+        margin: 0;
+    }
+    main {
+        margin: 0;
+        max-width: 100%;
+        margin-block-end: 15%;
+    }
+    .columns {
+        flex-flow: column;
+    }
+    .main-container {
+        padding: 0;
+    } 
+    .main-titles>h1 {
+        margin: 0;
+        padding: .25em 0;
+        color: white;
+        background-color:#fc6f5f;
+        height: auto;
+        width: 100%;
+        text-align: center;
+    }  
+    .main-titles>h2 {
+        margin: 0;
+        padding: .25em 0;
+        float:center;
+        color: white;
+        background-color:#5c5c5c;
+        height: auto;
+        width: 100%;
+        text-align: center;
+    }
+    .main-container>p {
+        margin: 1em 1em;
+    }
+
+    .steps {
+        padding: 0;
+        width:94%;
+        margin-top: 2em;
+    }
+
+    .revisions {
+        padding: 0;
+        margin-top: 2em;
+        width: 94%;
+        border-radius: 2px;
+    
+    }
+}
