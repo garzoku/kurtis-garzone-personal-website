@@ -99,13 +99,9 @@
     </footer>
     <script>
 
-
-        const thumbsRevision1= document.querySelector(".thumb-image").children;
-        const thumbsRevision2=document.querySelector(".revisions").childNodes[3].querySelector(".thumb-image").children;
-        const thumbsRevision3=document.querySelector(".revisions").childNodes[5].querySelector(".thumb-image").children;
-
         function changeImage1(event)
         {
+            const thumbsRevision1= document.querySelector(".thumb-image").children;
             document.querySelector(".revision-image").src=event.children[0].src
             for(i=0; i<thumbsRevision1.length; i++){
                 thumbsRevision1[i].classList.remove("active");
@@ -115,6 +111,7 @@
 
         function changeImage2(event)
         {
+            const thumbsRevision2=document.querySelector(".revisions").childNodes[3].querySelector(".thumb-image").children;
             document.querySelector(".revisions").childNodes[3].querySelector(".revision-image").src=event.children[0].src
             for(i=0; i<thumbsRevision2.length; i++){
                 thumbsRevision2[i].classList.remove("active");
@@ -124,6 +121,7 @@
 
         function changeImage3(event)
         {
+            const thumbsRevision3=document.querySelector(".revisions").childNodes[5].querySelector(".thumb-image").children;
             document.querySelector(".revisions").childNodes[5].querySelector(".revision-image").src=event.children[0].src
             for(i=0; i<thumbsRevision3.length; i++){
                 thumbsRevision3[i].classList.remove("active");
