@@ -6,7 +6,6 @@
     <meta name="author" content="Kurtis Garzone's Personal Website">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
     <header>
@@ -48,7 +47,7 @@
                         </div>
                     </div>
                     <div class="main-image">
-                        <img src="image/aboutme-before.jpg" class="revision-image" alt="product">
+                        <img src="image/aboutme-before.jpg" class="revision-image">
                         <div class="revision-text">My <i>About Me</i> page originally had a black and white photo
                         which aligned with the paragraph beside it. She suggested I use a color photo that reaches to
                     the footer.</div>
@@ -100,12 +99,10 @@
     </footer>
     <script>
 
-        window.addEventListener("DOMContentLoaded", function(e)
-        {
-            const thumbsRevision1= document.querySelector(".thumb-image").children;
+
+        const thumbsRevision1= document.querySelector(".thumb-image").children;
         const thumbsRevision2=document.querySelector(".revisions").childNodes[3].querySelector(".thumb-image").children;
         const thumbsRevision3=document.querySelector(".revisions").childNodes[5].querySelector(".thumb-image").children;
-        });
 
         function changeImage1(event)
         {
