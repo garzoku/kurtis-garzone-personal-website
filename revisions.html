@@ -37,17 +37,17 @@
                     <div class="revision-num">
                         <div class="thumb-image">
                             <h3 class="before">Before</h3>
-                            <div class="box active" onclick="changeImage1(this)">
-                                <img src="image/aboutme-before.JPG" alt="thumb">
+                            <div class="box section-1 active" onclick="changeImage(this)">
+                                <img src="image/aboutme-before.JPG" alt="thumb image">
                             </div>
-                            <div class="box" onclick="changeImage1(this)">
-                                <img src="image/aboutme-after.JPG" alt="thumb">
+                            <div class="box section-1" onclick="changeImage(this)">
+                                <img src="image/aboutme-after.JPG" alt="thumb image">
                             </div>
                             <h3 class="after">After</h3>
                         </div>
                     </div>
                     <div class="main-image">
-                        <img src="image/aboutme-before.JPG" class="revision-image">
+                        <img src="image/aboutme-before.JPG" class="revision-image section-1" alt="main image">
                         <div class="revision-text">My <i>About Me</i> page originally had a black and white photo
                         which aligned with the paragraph beside it. She suggested I use a color photo that reaches to
                     the footer.</div>
@@ -57,17 +57,17 @@
                     <div class="revision-num">
                         <div class="thumb-image">
                             <h3 class="before">Before</h3>
-                            <div class="box active" onclick="changeImage2(this)">
-                                <img src="image/favicon-before.JPG" alt="thumb">
+                            <div class="box section-2 active" onclick="changeImage(this)">
+                                <img src="image/favicon-before.JPG" alt="thumb image">
                             </div>
-                            <div class="box" onclick="changeImage2(this)">
-                                <img src="image/favicon-after.JPG" alt="thumb">
+                            <div class="box section-2" onclick="changeImage(this)">
+                                <img src="image/favicon-after.JPG" alt="thumb image">
                             </div>
                             <h3 class="after">After</h3>
                         </div>
                     </div>
                     <div class="main-image">
-                        <img src="image/favicon-before.JPG" class="revision-image" alt="product">
+                        <img src="image/favicon-before.JPG" class="revision-image section-2" alt="main image">
                         <div class="revision-text">I placed a favicon on the page because I wanted to try and include one. 
                             However, she told me it was too small to read. I removed it from the navigation bar.</div>
                     </div>
@@ -76,17 +76,17 @@
                     <div class="revision-num">
                         <div class="thumb-image">
                             <h3 class="before">Before</h3>
-                            <div class="box active" onclick="changeImage3(this)">
-                                <img src="image/creative-before.JPG" alt="thumb">
+                            <div class="box section-3 active" onclick="changeImage(this)">
+                                <img src="image/creative-before.JPG" alt="thumb image">
                             </div>
-                            <div class="box" onclick="changeImage3(this)">
-                                <img src="image/creative-after.JPG" alt="thumb">
+                            <div class="box section-3" onclick="changeImage(this)">
+                                <img src="image/creative-after.JPG" alt="thumb image">
                             </div>
                             <h3 class="after">After</h3>
                         </div>
                     </div>
                     <div class="main-image">
-                        <img src="image/creative-before.JPG" class="revision-image" alt="product">
+                        <img src="image/creative-before.JPG" class="revision-image section-3" alt="main image">
                         <div class="revision-text">She said that this margin for the <i>Creative</i> page, shown above in the <i>Before</i> image, 
                             was too large and made the page look awkward. I removed most of the space in the margin. </div>
                     </div>
@@ -98,36 +98,28 @@
         
     </footer>
     <script>
-
-        function changeImage1(event)
+        var mainImages=[];
+        var sections=[];
+        window.addEventListener("DOMContentLoaded", function(e)
         {
-            const thumbsRevision1= document.querySelector(".thumb-image").children;
-            document.querySelector(".revision-image").src=event.children[0].src
-            for(i=0; i<thumbsRevision1.length; i++){
-                thumbsRevision1[i].classList.remove("active");
-            }
-            event.classList.add("active");
-        }
+        mainImages=document.querySelectorAll(".revision-image");
+        sections=document.querySelectorAll("section");    
+        });
 
-        function changeImage2(event)
+        function changeImage(event)
         {
-            const thumbsRevision2=document.querySelector(".revisions").childNodes[3].querySelector(".thumb-image").children;
-            document.querySelector(".revisions").childNodes[3].querySelector(".revision-image").src=event.children[0].src
-            for(i=0; i<thumbsRevision2.length; i++){
-                thumbsRevision2[i].classList.remove("active");
-            }
-            event.classList.add("active");
-        }
+            var eventClassList=event.classList;
 
-        function changeImage3(event)
-        {
-            const thumbsRevision3=document.querySelector(".revisions").childNodes[5].querySelector(".thumb-image").children;
-            document.querySelector(".revisions").childNodes[5].querySelector(".revision-image").src=event.children[0].src
-            for(i=0; i<thumbsRevision3.length; i++){
-                thumbsRevision3[i].classList.remove("active");
-            }
-            event.classList.add("active");
-        }
+                        for (let i = 0; i < mainImages.length; i++) 
+                        {
+                            if(event.classList.contains(mainImages[i].classList[1]))
+                            {
+                                mainImages[i].src=event.children[0].src;
+                                sections[i].querySelector(".active").classList.remove("active");
+                            }
+                        }
+                        event.classList.add("active");
+         }
 
     </script>
 
